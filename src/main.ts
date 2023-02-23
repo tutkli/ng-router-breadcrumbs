@@ -1,8 +1,8 @@
-
 import {bootstrapApplication, BrowserModule} from "@angular/platform-browser";
 import {AppComponent} from "./app/app.component";
 import {importProvidersFrom} from "@angular/core";
 import {provideRouter, Routes} from "@angular/router";
+import {provideAnimations} from '@angular/platform-browser/animations';
 
 
 const routes: Routes = [
@@ -14,6 +14,7 @@ const routes: Routes = [
 bootstrapApplication(AppComponent, {
     providers: [
         importProvidersFrom(BrowserModule),
+        provideAnimations(),
         provideRouter(routes),
     ]
 }).catch(err => console.error(err));
