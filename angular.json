@@ -103,11 +103,23 @@
           "options": {
             "browserTarget": "ng-router-breadcrumbs:build"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
   "cli": {
-    "analytics": "87853d73-2f26-4675-b8b8-aae6ffb44a18"
+    "analytics": "87853d73-2f26-4675-b8b8-aae6ffb44a18",
+    "schematicCollections": [
+      "@angular-eslint/schematics"
+    ]
   }
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {RouterOutlet} from "@angular/router";
-import {BreadcrumbComponent} from "./breadcrumb.component";
+import { RouterOutlet } from '@angular/router';
+import { BreadcrumbComponent } from './breadcrumb.component';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,6 @@ import {BreadcrumbComponent} from "./breadcrumb.component";
     <app-breadcrumb></app-breadcrumb>
     <router-outlet></router-outlet>
   `,
-  styles: []
+  styles: [],
 })
 export class AppComponent {}

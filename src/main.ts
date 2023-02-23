@@ -1,20 +1,27 @@
-import {bootstrapApplication, BrowserModule} from "@angular/platform-browser";
-import {AppComponent} from "./app/app.component";
-import {importProvidersFrom} from "@angular/core";
-import {provideRouter, Routes} from "@angular/router";
-import {provideAnimations} from '@angular/platform-browser/animations';
-
+import { bootstrapApplication, BrowserModule } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
+import { importProvidersFrom } from '@angular/core';
+import { provideRouter, Routes } from '@angular/router';
+import { provideAnimations } from '@angular/platform-browser/animations';
 
 const routes: Routes = [
-    { path: '', pathMatch: 'full', redirectTo: 'home' },
-    { path: 'home', loadComponent: () => import('src/app/home.component'), data: { breadcrumb: 'Home page' } },
-    { path: 'about', loadComponent: () => import('src/app/about.component'), data: { breadcrumb: 'About Page' } }
-]
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  {
+    path: 'home',
+    loadComponent: () => import('src/app/home.component'),
+    data: { breadcrumb: 'Home page' },
+  },
+  {
+    path: 'about',
+    loadComponent: () => import('src/app/about.component'),
+    data: { breadcrumb: 'About Page' },
+  },
+];
 
 bootstrapApplication(AppComponent, {
-    providers: [
-        importProvidersFrom(BrowserModule),
-        provideAnimations(),
-        provideRouter(routes),
-    ]
+  providers: [
+    importProvidersFrom(BrowserModule),
+    provideAnimations(),
+    provideRouter(routes),
+  ],
 }).catch(err => console.error(err));
