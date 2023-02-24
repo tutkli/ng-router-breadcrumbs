@@ -10,7 +10,7 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <app-page>
-      <h1>Welcome to Europe</h1>
+      <h1>Welcome to Africa</h1>
       <app-navbar>
         <a routerLink="equatorial-guinea">Equatorial Guinea</a>
         <span>Egypt</span>
