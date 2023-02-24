@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { BreadcrumbComponent } from './components/breadcrumb.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { NavbarComponent } from './components/navbar.component';
@@ -12,11 +12,12 @@ import { NavbarComponent } from './components/navbar.component';
     BreadcrumbComponent,
     MatToolbarModule,
     NavbarComponent,
+    RouterLink,
   ],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <mat-toolbar color="primary">
-      <span>Angular Router Breadcrumbs</span>
+      <a routerLink="/">Angular Router Breadcrumbs</a>
     </mat-toolbar>
 
     <main>
@@ -28,6 +29,10 @@ import { NavbarComponent } from './components/navbar.component';
     `
       main {
         padding: 1rem;
+      }
+      a {
+        text-decoration: none;
+        color: white;
       }
     `,
   ],
