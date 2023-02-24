@@ -1,11 +1,11 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-country',
+  selector: 'app-spain',
   standalone: true,
   imports: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: ` <h1>Countries</h1> `,
+  template: ` <h1>Spain</h1> `,
   styles: [],
 })
-export default class CountryComponent {}
+export default class SpainComponent {}

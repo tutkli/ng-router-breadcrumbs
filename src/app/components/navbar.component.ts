@@ -8,8 +8,8 @@ import { RouterLink } from '@angular/router';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <button routerLink="/home">Home</button>
-    <button routerLink="/home/europe">Europe</button>
-    <button routerLink="/home/europe/spain">Spain</button>
+    <button routerLink="/europe">Europe</button>
+    <button routerLink="/europe/spain">Spain</button>
   `,
   styles: [
     `

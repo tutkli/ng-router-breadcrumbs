@@ -1,17 +1,33 @@
 import { Routes } from '@angular/router';
-import { continentRoutes } from './continent.routes';
 
 export const appRoutes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'home' },
   {
-    path: 'home',
+    path: '',
     children: [
       {
         path: '',
-        loadComponent: () => import('src/app/pages/home.component'),
+        pathMatch: 'full',
+        redirectTo: '/home',
+        data: { breadcrumb: 'root' },
       },
-      ...continentRoutes,
+      {
+        path: 'home',
+        loadChildren: () =>
+          import('src/app/routes/home.routes').then(mod => mod.homeRoutes),
+        data: { breadcrumb: 'Home' },
+      },
+      {
+        path: 'europe',
+        loadChildren: () =>
+          import('src/app/routes/europe.routes').then(mod => mod.europeRoutes),
+        data: { breadcrumb: 'Europe' },
+      },
+      {
+        path: 'africa',
+        loadChildren: () =>
+          import('src/app/routes/africa.routes').then(mod => mod.africaRoutes),
+        data: { breadcrumb: 'Africa' },
+      },
     ],
-    data: { breadcrumb: 'Home' },
   },
 ];
