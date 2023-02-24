@@ -18,10 +18,6 @@ import { PageComponent } from '../components/page.component';
           config.
         </p>
         <p>
-          Click on a breadcrumb label to see it's sibling routes. Click on the
-          arrow to see their children routes.
-        </p>
-        <p>
           Navigate through the page to see the breadcrumb component in action!
         </p>
       </div>
