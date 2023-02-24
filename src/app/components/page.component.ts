@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-page',
   standalone: true,
   imports: [],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,11 +9,15 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styles: [
     `
       :host {
+        padding: 5rem;
         display: flex;
-        gap: 1rem;
-        font-size: 2rem;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
       }
     `,
   ],
 })
-export class NavbarComponent {}
+export class PageComponent {}

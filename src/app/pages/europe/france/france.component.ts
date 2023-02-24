@@ -1,11 +1,20 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { PageComponent } from '../../../components/page.component';
 
 @Component({
   selector: 'app-france',
   standalone: true,
-  imports: [],
+  imports: [PageComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  template: ` <h1>France</h1> `,
+  template: `
+    <app-page>
+      <h1>France</h1>
+      <img
+        src="https://flagicons.lipis.dev/flags/4x3/fr.svg"
+        width="300px"
+        alt="French Flag" />
+    </app-page>
+  `,
   styles: [],
 })
 export default class FranceComponent {}

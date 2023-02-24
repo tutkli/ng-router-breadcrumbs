@@ -2,19 +2,19 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { PageComponent } from '../../../components/page.component';
 
 @Component({
-  selector: 'app-equatorial-guinea',
+  selector: 'app-south-africa',
   standalone: true,
   imports: [PageComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <app-page>
-      <h1>Equatorial Guinea</h1>
+      <h1>South Africa</h1>
       <img
-        src="https://flagicons.lipis.dev/flags/4x3/gq.svg"
+        src="https://flagicons.lipis.dev/flags/4x3/za.svg"
         width="300px"
-        alt="Equatorial Guinean Flag" />
+        alt="South African Flag" />
     </app-page>
   `,
   styles: [],
 })
-export default class EquatorialGuineaComponent {}
+export default class SouthAfricaComponent {}

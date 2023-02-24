@@ -13,4 +13,10 @@ export const africaRoutes: Routes = [
       ),
     data: { breadcrumb: 'Equatorial Guinea' },
   },
+  {
+    path: 'south-africa',
+    loadComponent: () =>
+      import('src/app/pages/africa/south-africa/south-africa.component'),
+    data: { breadcrumb: 'South Africa' },
+  },
 ];

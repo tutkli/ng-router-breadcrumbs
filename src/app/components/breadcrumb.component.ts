@@ -53,12 +53,14 @@ export interface Breadcrumb {
   styles: [
     `
       :host {
-        margin: 1rem;
         border: 1px #ddd solid;
         padding: 0.2rem 0.5rem;
         display: flex;
         gap: 0.25rem;
         align-items: center;
+      }
+      button {
+        height: 48px !important;
       }
     `,
   ],

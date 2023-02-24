@@ -19,10 +19,17 @@ import { NavbarComponent } from './components/navbar.component';
       <span>Angular Router Breadcrumbs</span>
     </mat-toolbar>
 
-    <app-breadcrumb></app-breadcrumb>
-    <app-navbar />
-    <router-outlet></router-outlet>
+    <main>
+      <app-breadcrumb />
+      <router-outlet />
+    </main>
   `,
-  styles: [],
+  styles: [
+    `
+      main {
+        padding: 1rem;
+      }
+    `,
+  ],
 })
 export class AppComponent {}
